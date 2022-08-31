@@ -1,11 +1,11 @@
 const fs = require("fs");
 const inputData = fs.readFileSync("/dev/stdin");
 
-const a = parseInt(inputData);
-
-let star = "";
+// const a = 3;
+const a = inputData;
+let result = 0;
 
 for (let i = 0; i < a; i++) {
-  star += "*";
-  console.log(star);
+  result += i + 1;
 }
+console.log(result);

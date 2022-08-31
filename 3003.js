@@ -1,9 +1,11 @@
 const fs = require("fs");
-
-const input = fs.readFileSync("/dev/stdin").toString().split(" ").map(Number);
+let input = fs.readFileSync("/dev/stdin").toString().trim().split(" ");
 
 const chess = [1, 1, 2, 2, 2, 8];
-for (i = 1; i <= chess.length; i++) {
-  let result = input.map((i) => chess[i] - input[i]);
+
+let result = "";
+for (let i = 0; i < chess.length; i++) {
+  let substract = parseInt(chess[i]) - parseInt(input[i]);
+  result += substract + " ";
 }
 console.log(result);
